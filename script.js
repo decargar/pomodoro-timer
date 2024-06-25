@@ -1,11 +1,11 @@
-let workTime = 25 * 60; // 25 minutes in seconds
-        let shortBreakTime = 5 * 60; // 5 minutes in seconds
-        let longBreakTime = 15 * 60; // 15 minutes in seconds
+let workTime = 25 * 60; 
+        let shortBreakTime = 5 * 60; 
+        let longBreakTime = 15 * 60; 
         let currentTime = workTime;
         let timerInterval;
         let isRunning = false;
         let isPaused = false;
-        let currentMode = 'pomodoro'; // Initial mode is pomodoro
+        let currentMode = 'pomodoro'; 
 
         function setMode(mode) {
             currentMode = mode;
@@ -68,10 +68,10 @@ let workTime = 25 * 60; // 25 minutes in seconds
 
         function handleEndOfTimer() {
             alert("Time's up!");
-            switchMode(); // Switch to the next mode
+            switchMode(); 
             currentTime = getTimeByMode(currentMode);
             updateDisplay(currentTime);
-            startTimer(); // Start the next timer automatically
+            startTimer(); 
         }
 
         function getTimeByMode(mode) {
