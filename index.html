@@ -5,37 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        #timer {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        button {
-            font-size: 18px;
-            margin: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-    </style>
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="main">
-        <div class workobj>
-            <button id="pomodoroBtn" onclick="startTimer()">Pomodoro</button>
-            <button id="longBreakBtn" onclick="pauseTimer()" disabled>Long breaks</button>
-            <button id="shortBreakBtn" onclick="resumeTimer()" disabled>Short breaks</button>
+        <div class="workobj">
+            <button id="pomodoroBtn" onclick="setMode('pomodoro')">Pomodoro</button>
+            <button id="longBreakBtn" onclick="setMode('longBreak')">Long Break</button>
+            <button id="shortBreakBtn" onclick="setMode('shortBreak')">Short Break</button>
         </div>
-        <div id="timer">25:00</div>
-        <div class="time">
-            <button id="startBtn" onclick="startTimer()">Start</button>
+        <div class="time" id="timer">25:00</div>
+        <div class="des">
+            <button id="startBtn" onclick="startTimer()" disabled>Start</button>
             <button id="pauseBtn" onclick="pauseTimer()" disabled>Pause</button>
             <button id="resumeBtn" onclick="resumeTimer()" disabled>Resume</button>
             <button id="resetBtn" onclick="resetTimer()" disabled>Reset</button>
